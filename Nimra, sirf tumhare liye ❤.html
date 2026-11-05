@@ -1,0 +1,329 @@
+
+    <!DOCTYPE html>
+    <html lang="ur">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="color-scheme" content="dark">
+    <title>Nimra, sirf tumhare liye ❤️</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+    <style>
+    :root{--rose:#ff5c8a;--gold:#ffd27a;--violet:#7a5cff;--teal:#4fd1c5;--ink:#fff;--glass:rgba(255,255,255,.12)}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Poppins,sans-serif;color:white;background:#1a0a2e;overflow-x:hidden;line-height:1.7}
+    .bg{position:fixed;inset:0;z-index:-1;background:linear-gradient(135deg,#3a0a5c,#a8235e,#ff7a59,#7a5cff);background-size:400% 400%;animation:bg 18s ease infinite}
+    @keyframes bg{50%{background-position:100% 50%}}
+    section{min-height:100vh;padding:70px 18px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+    h1,h2{font-family:"Playfair Display",Georgia,serif;margin:0 0 12px}
+    h1{font-size:clamp(2.4rem,9vw,4.6rem);background:linear-gradient(90deg,var(--gold),var(--rose),#fff);-webkit-background-clip:text;background-clip:text;color:transparent;animation:glow 3s ease-in-out infinite alternate}
+    @keyframes glow{to{filter:drop-shadow(0 0 14px #ffd27a)}}
+    h2{font-size:clamp(1.8rem,6vw,2.8rem);color:var(--gold)}
+    p{max-width:560px;margin:8px auto;font-size:1.05rem}
+    .card{background:var(--glass);backdrop-filter:blur(10px);border:1px solid #ffffff40;border-radius:22px;padding:22px;max-width:560px;width:100%;margin:12px auto}
+    button,.btn{font:inherit;border:0;border-radius:40px;padding:13px 26px;margin:6px;cursor:pointer;color:white;background:linear-gradient(90deg,var(--rose),var(--violet));box-shadow:0 8px 22px #0005;transition:transform .2s;text-decoration:none;display:inline-block}
+    button:hover,.btn:hover{transform:translateY(-3px) scale(1.04)}
+    button.alt{background:#ffffff30;box-shadow:none;border:1px solid #ffffff59}
+    .rv{opacity:0;transform:translateY(40px);transition:all .9s}
+    .rv.on{opacity:1;transform:none}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;max-width:760px;width:100%}
+    .grid .card{margin:0;font-size:1rem}
+    .grid .card b{display:block;font-size:2rem}
+    .heart{position:fixed;bottom:-40px;pointer-events:none;z-index:5;animation:up linear forwards}
+    @keyframes up{to{transform:translateY(-115vh) rotate(40deg);opacity:0}}
+    .pun{font-size:1.25rem;line-height:2;color:white;font-family:"Playfair Display",Georgia,serif}
+    #ball{width:90px;height:90px;border-radius:50%;margin:18px auto;background:radial-gradient(circle,#fff,var(--teal));transition:transform 4s ease-in-out;box-shadow:0 0 40px var(--teal)}
+    textarea{font:inherit;width:100%;padding:13px;border-radius:14px;border:1px solid #ffffff66;background:#0004;color:white;margin:8px 0}
+    ::placeholder{color:#ffffffa6}
+    .ans{margin-top:12px;padding:12px;border-radius:14px;background:#0004;min-height:24px}
+    .chips{display:flex;flex-wrap:wrap;justify-content:center}
+    small{opacity:.85}
+    .frame{max-width:340px;width:100%;margin:14px auto;padding:12px 12px 26px;background:white;border-radius:6px;transform:rotate(-3deg);box-shadow:0 20px 40px #0006;animation:fl 5s ease-in-out infinite alternate}
+    @keyframes fl{to{transform:rotate(2deg) translateY(-10px)}}
+    .frame img{width:100%;height:300px;object-fit:cover;border-radius:4px;display:block}
+    .frame i{display:block;color:#7a1f45;font-family:"Playfair Display",Georgia,serif;font-style:normal;margin-top:10px;font-size:1.1rem}
+    .paper{position:relative;background:#fff8e7;color:#3b2a1a;text-align:left;border-radius:10px;padding:26px 22px;max-width:600px;width:100%;margin:14px auto;box-shadow:0 18px 40px #0006;line-height:1.9}
+    .paper h3{font-family:"Playfair Display",Georgia,serif;text-align:center;margin:0 0 10px;color:#7a1f45}
+    .paper p{max-width:none;margin:8px 0}
+    .stamp{position:absolute;right:14px;bottom:70px;border:4px solid #1e9e57;color:#1e9e57;border-radius:12px;padding:4px 14px;font-weight:700;letter-spacing:2px;transform:rotate(-14deg) scale(3);opacity:0;transition:all .5s}
+    .stamp.on{transform:rotate(-14deg) scale(1);opacity:1}
+
+    /* Music player */
+    .music-card{max-width:560px;width:100%;padding:22px;border-radius:25px;background:rgba(255,255,255,.15);border:1px solid #ffffff50;backdrop-filter:blur(12px);box-shadow:0 15px 40px #0005;margin:20px auto}
+    .music-card h3{color:var(--gold);font-family:"Playfair Display",serif;font-size:1.5rem}
+    .music-icon{font-size:48px;animation:music 2s infinite ease-in-out}
+    @keyframes music{50%{transform:scale(1.15) rotate(8deg)}}
+    .music-card iframe{width:100%;height:210px;border:0;border-radius:15px;margin-top:12px}
+    .music-note{color:#ffe0eb;font-size:.9rem}
+    @media(max-width:480px){.music-card iframe{height:190px}.card{padding:17px}}
+    </style>
+    </head>
+
+    <body>
+    <div class="bg"></div>
+
+    <section id="top">
+    <h1>Meri Nimra ❤️</h1>
+    <p>Ye poori website sirf tumhare liye hai. Neeche scroll karo, har cheez tumhari muskurahat ke liye bani hai.</p>
+    <button onclick="document.getElementById('love').scrollIntoView()">Shuru karo 💖</button>
+    <button class="alt" onclick="burst()">Dil udao 💗</button>
+    </section>
+
+    <section id="love">
+    <h2 class="rv">Tum meri kya ho</h2>
+    <div class="grid">
+    <div class="card rv"><b>🌙</b>Tum meri sukoon ho, meri dua ho.</div>
+    <div class="card rv"><b>💍</b>Tum meri biwi hi nahi, meri best friend ho.</div>
+    <div class="card rv"><b>🌹</b>Tum muskurati ho to mera poora din ban jata hai.</div>
+    <div class="card rv"><b>🤝</b>Main har mushkil mein tumhare sath hoon, hamesha.</div>
+    <div class="card rv"><b>🌍</b>Duniya ek taraf, meri Nimra ek taraf.</div>
+    <div class="card rv"><b>🤲</b>Allah ne mujhe tum jaisa tohfa diya, shukar hai.</div>
+    </div>
+    <div class="card rv" style="margin-top:22px">
+    <p id="rs">Ek aur wajah chahiye? 👇</p>
+    <button onclick="reason()">Mujhse kitna pyaar? 💕</button>
+    </div>
+    </section>
+
+    <section id="sukoon">
+    <h2 class="rv">Mera sukoon, meri Nimra 🤍</h2>
+    <div class="card rv">
+    <p class="pun">Nimra, mainu pata ae ajj tera din bahut aukha si.<br>
+    Tu fikar na kar, main tere naal haan.<br>
+    Tu meri jaan ae, meri khushi ae, mera sukoon ae.<br>
+    Jo vi hoya, tu akeli nahi, tere naal tera Saad ae.<br>
+    Jo dil vich ae mainu dass, main sunaanga.<br>
+    Tenu hasdi vekh ke mera dil khush ho janda ae.<br>
+    Sab theek ho jana ae, inshaAllah.<br>
+    Main tenu bahut pyar karda aan. 🤍</p>
+    </div>
+    <div class="card rv">
+    <p>Aao ek lamba saans lein 🌬️<br><small>Gola bada ho to saans andar, chota ho to bahar.</small></p>
+    <div id="ball"></div>
+    <button onclick="breathe()">Shuru karo</button>
+    </div>
+    <div class="card rv">
+    <button onclick="hug()">Saad di taraf ton jhappi 🤗</button>
+    <div class="ans" id="hg"></div>
+    </div>
+    </section>
+
+    <section id="qa">
+    <h2 class="rv">Sawal jawab 💬</h2>
+    <p class="rv">Pehle main tumse kuch poochta hoon, phir tum jo chaho mujhse pooch lo.</p>
+    <div class="card rv">
+    <h3>Saad ke sawal 🧡</h3>
+    <p id="q"></p>
+    <div class="chips" id="opts"></div>
+    <div class="ans" id="qa1">Jawab chuno 👆</div>
+    </div>
+    <div class="card rv">
+    <h3>Nimra ke sawal 💜</h3>
+    <div class="chips" id="ask"></div>
+    <div class="ans" id="ar">Koi sawal chuno ya neeche khud likho.</div>
+    <textarea id="my" rows="3" placeholder="Apna sawal ya dil ki baat likho..."></textarea>
+    <button onclick="send()">Saad ko bhejo 📲</button><br>
+    <small>Ye WhatsApp khol dega aur message tayyar hoga.</small>
+    </div>
+    </section>
+
+    <section id="dil">
+    <h2 class="rv">Dil di gall 💌</h2>
+
+    <!-- Nimra ki original photo -->
+    <div class="frame rv">
+    <img src="nimra.jpg" alt="Meri Nimra">
+    <i>Tu te main, hamesha ❤️</i>
+    </div>
+
+    <div class="card rv">
+    <h3>❤️ Meri Nimra Ke Naam ❤️</h3>
+    <p class="pun">
+        Ravay ishq salamat, sada duawan kariya kar ❤️<br>
+        Main naal kharan aan tere,<br>
+        Tu fikar na karya kar 🤍
+    </p>
+    <div style="font-size:35px">🎵 💗 🎵</div>
+    <p>Hamesha tumhare saath, tumhara Saad ❤️</p>
+    </div>
+
+    <div class="card rv">
+    <p class="pun" style="font-size:1.1rem">
+    Meri pyari Nimra,<br>
+    jadon ton tu meri zindagi vich aayi ae, mera ghar ghar ban gaya ae. Tu meri khushi ae, meri dua ae te mera sab ton vadda sukoon ae.<br>
+    Kade kade zindagi aukhi lagdi ae, par tere naal hon da ehsaas hi mainu hausla dinda ae. Mainu pata ae tu bahut kuj sehndi ae te kise nu dasdi vi nahi, par main chahunda aan ke tu mainu dasdi reh, main hamesha sunaanga.<br>
+    Je kade meri koi gall tainu chubh gayi hove, ta dil ton maaf kar deyin. Mera maksad kade vi tainu dukh dena nahi, main tan tainu hasdi vekhna chahunda aan.<br>
+    Main waada karda aan ke har mushkil vich tere naal khalovaanga, tera haath nahi chhaddanga, te tainu hamesha izzat te pyar dewanga. Tu muskura de, meri poori duniya roshan ho jandi ae. 🤍
+    </p>
+    </div>
+
+    <div class="paper rv">
+    <h3>Arzi 📜</h3>
+    <p><b>Beshak-e-khidmat:</b> Meri jaan, meri Nimra sahiba<br>
+    <b>Mauzu:</b> Saad nu maaf karan te manaun bare arzi</p>
+    <p>Janab-e-aali, bade ehtraam naal arz ae ke ih banda Saad Ali tuhadi khushi da sab ton vadda talabgaar ae. Meri guzarish ae ke:</p>
+    <p>
+    1. Jithe vi meri koi kotahi hoyi hove, mainu maaf kar ditta jawe.<br>
+    2. Tusi muskura deo, kyunke tuhadi muskaan mera sukoon ae.<br>
+    3. Mainu har dukh sukh vich apne naal rakhia jawe.
+    </p>
+    <p>Umeed ae ke meri arzi manzoor kiti jawegi.</p>
+    <p style="text-align:right"><b>Aap da fermabardar,<br>Saad Ali</b></p>
+    <div class="stamp" id="st">MANZOOR</div>
+    <div style="text-align:center">
+    <button onclick="stamp()">Arzi manzoor karo ✅</button>
+    </div>
+    </div>
+    </section>
+
+    <section>
+    <h2 class="rv">Hamesha tumhara, Saad ❤️</h2>
+    <p class="rv">Tum muskura do, meri poori dunya roshan ho jati hai.</p>
+    <button onclick="window.scrollTo(0,0)">Dobara dekho ↑</button>
+    </section>
+
+    <script>
+    var NUMBER="923447433988";
+
+    function stamp(){
+    document.getElementById("st").classList.add("on");
+    burst("💚");
+    }
+
+    function heart(e){
+    var h=document.createElement("div");
+    h.className="heart";
+    h.textContent=e||["❤️","💗","💖","✨","🌹"][Math.floor(Math.random()*5)];
+    h.style.left=Math.random()*95+"%";
+    h.style.fontSize=(16+Math.random()*28)+"px";
+    h.style.animationDuration=(5+Math.random()*4)+"s";
+    document.body.appendChild(h);
+    setTimeout(function(){h.remove()},9000);
+    }
+
+    function burst(e){
+    for(var i=0;i<22;i++)
+    setTimeout(function(){heart(e)},i*90);
+    }
+
+    setInterval(function(){heart()},1400);
+
+    var io=new IntersectionObserver(function(a){
+    a.forEach(function(x){
+    if(x.isIntersecting)x.target.classList.add("on");
+    });
+    },{threshold:.15});
+
+    document.querySelectorAll(".rv").forEach(function(e){
+    io.observe(e);
+    });
+
+    var R=[
+    "Tumhari awaz sunke mujhe sukoon milta hai.",
+    "Tum mere ghar ko ghar banati ho.",
+    "Tumhari choti choti baatein mujhe bohot pyari lagti hain.",
+    "Main tumhare bina adhura hoon.",
+    "Tum meri sab se khoobsurat dua ho."
+    ],ri=0;
+
+    function reason(){
+    document.getElementById("rs").textContent=R[ri++%R.length];
+    burst("❤️");
+    }
+
+    var big=false,iv;
+
+    function breathe(){
+    clearInterval(iv);
+    function s(){
+    big=!big;
+    document.getElementById("ball").style.transform=big?"scale(1.8)":"scale(1)";
+    }
+    s();
+    iv=setInterval(s,4000);
+    }
+
+    var H=[
+    "Tu meri taqat ae.",
+    "Main tere naal haan, hamesha.",
+    "Tenu bahut pyar karda aan.",
+    "Sab theek ho jana ae, meri jaan."
+    ],hi=0;
+
+    function hug(){
+    document.getElementById("hg").textContent=H[hi++%H.length]+" 🤗";
+    burst("🤍");
+    }
+
+    var Q=[
+    {q:"Aaj tumhara din kaisa tha?",o:{
+    "Bohot acha 😊":"Ye sun ke meri khushi double ho gayi!",
+    "Theek tha 🙂":"Chalo, kal aur behtar banayenge, main hoon na.",
+    "Acha nahi tha 😔":"Meri jaan, mujhe batao kya hua. Main sirf sunna chahta hoon. 🤍"
+    }},
+    {q:"Kya tumne kuch khaya aaj?",o:{
+    "Haan 😋":"Shabash! Meri Nimra ka khayal rakhna zaroori hai.",
+    "Nahi 🙈":"Pehle kuch kha lo, phir baat karte hain. Mujhe fikar hoti hai."
+    }},
+    {q:"Tumhein abhi sab se zyada kya chahiye?",o:{
+    "Sukoon 🌙":"Tum mere paas ao, main tumhara sukoon hoon.",
+    "Jhappi 🤗":"Meri taraf se ek bari si jhappi! 🤗🤗",
+    "Chai ☕":"Chai ki date pakki, jaldi!"
+    }}
+    ],qi=0;
+
+    function loadQ(){
+    var x=Q[qi%Q.length];
+    document.getElementById("q").textContent=x.q;
+    var o=document.getElementById("opts");
+    o.innerHTML="";
+    Object.keys(x.o).forEach(function(k){
+    var b=document.createElement("button");
+    b.className="alt";
+    b.textContent=k;
+    b.onclick=function(){
+    document.getElementById("qa1").textContent=x.o[k];
+    burst("💖");
+    setTimeout(function(){
+    qi++;
+    loadQ();
+    document.getElementById("qa1").textContent="Agla sawal aa gaya 👆";
+    },3500);
+    };
+    o.appendChild(b);
+    });
+    }
+    loadQ();
+
+    var A={
+    "Saad tum mujhse kitna pyaar karte ho?":"Itna ke lafzon mein nahi keh sakta, bas itna jaano ke tum meri zindagi ho.",
+    "Meri sab se acha baat kya hai?":"Tumhara dil, tumhari muskurahat aur tumhari fikar karne wali aadat.",
+    "Agar main naraz ho jaun to kya karoge?":"Pehle sunoonga, phir manaunga, aur tumhe hasa ke hi chhodunga.",
+    "Tum mere liye kya kar sakte ho?":"Sab kuch, jo mere bas mein ho aur jo na ho, uski bhi koshish karunga."
+    };
+
+    var ak=document.getElementById("ask");
+
+    Object.keys(A).forEach(function(k){
+    var b=document.createElement("button");
+    b.className="alt";
+    b.textContent=k;
+    b.onclick=function(){
+    document.getElementById("ar").textContent=A[k]+" ❤️";
+    burst("💜");
+    };
+    ak.appendChild(b);
+    });
+
+    function send(){
+    var t=document.getElementById("my").value.trim();
+    if(!t){
+    document.getElementById("ar").textContent="Pehle kuch likho, phir bhejo 💜";
+    return;
+    }
+    window.open("https://wa.me/"+NUMBER+"?text="+encodeURIComponent("Saad, Nimra ka sawal: "+t),"_blank");
+    }
+    </script>
+    </body>
+    </html>
